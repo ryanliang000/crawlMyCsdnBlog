@@ -1,4 +1,3 @@
-#Owed by: http://blog.csdn.net/chunyexiyu
 #direct get the input name from called function code
 def retrieve_name_ex(var):
     stacks = inspect.stack()
