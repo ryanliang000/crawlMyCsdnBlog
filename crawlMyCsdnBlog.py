@@ -74,11 +74,11 @@ if (isPageError(mainPage)):
     
 #default max get 100 pages
 checkUrlUserName= "/" + userName + "/"
-for i in range(13, 101):
+for i in range(1, 101):
     listPage = session.get(mainUrl + "article/list/" + str(i))
     articleUrlList = listPage.html.find("#mainBox > main > div.article-list", first=True)
     if (articleUrlList is None):
-        break;
+        break
     
     print("process page {}".format(i).center(50, "-"))
     uid = listPage.html.find("body > header > div > div.title-box > h1", first=True).text
